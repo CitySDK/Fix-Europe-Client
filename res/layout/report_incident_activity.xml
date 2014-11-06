@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dashboard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdgeLength="8dp"
+    android:paddingBottom="8dp"
+    android:paddingRight="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/pic_layout"
+            style="@style/listView"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/listview_selector"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/picture"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/next"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" >
+
+            <ProgressBar
+                android:id="@+android:id/progress_small1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/incident_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_descriptions_text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/incident_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incident_description_title"
+                android:ems="7"
+                android:hint="@string/incident_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/incident_service_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incident_description"
+                android:layout_marginTop="20dp"
+                android:text="@string/search_service_text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <AutoCompleteTextView
+                android:id="@+id/incident_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/incident_service_title"
+                android:ems="7"
+                android:hint="@string/search_service_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/show_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/incident_service"
+                android:layout_marginTop="5dp"
+                android:text="@string/show_services"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/incident_address_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_services"
+                android:text="@string/incident_address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/incident_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incident_address_title"
+                android:ems="7"
+                android:hint="@string/incident_address_hint"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <Button
+                android:id="@+id/report_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incident_address"
+                android:layout_marginTop="10dp"
+                android:text="@string/report" />
+            
+            <TextView
+                android:id="@+id/incident_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incident_address"
+                android:layout_toRightOf="@+id/report_button"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

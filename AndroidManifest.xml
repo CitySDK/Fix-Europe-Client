@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pt.fix.europe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="pt.fix.europe.activity.SigninActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="pt.fix.europe.activity.FixEuropeActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pt.fix.europe.activity.PreferencesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pt.fix.europe.activity.ShowServicesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="pt.fix.europe.activity.ReportedIncidentsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        
+        <meta-data 
+            android:name="pt.fix.europe.uri"
+            android:value="https://tagus.inesc-id.pt/participation/"/>
+        <meta-data
+            android:name="fi.open311.debug"
+            android:value="https://pate.affecto.com/restWAR/rest/v1/" />
+        <meta-data
+            android:name="fi.open311.key"
+            android:value="afss4otdt82rs9eus2mr" />
+        <meta-data
+            android:name="pt.open311.debug"
+            android:value="http://web4.cm-lisboa.pt/citySDK/v1/" />
+        <!-- THE KEY MUST START WITH A DUMMY CHAR! -->
+        <meta-data
+            android:name="pt.open311.key"
+            android:value="aMZlDoEOgQPZqSKEQdUpn" />
+        <meta-data
+            android:name="lm.open311.debug"
+            android:value="https://participation.citysdk.lamia-city.gr/rest/open311/v1/" />        
+		<!-- THE KEY MUST START WITH A DUMMY CHAR! -->
+        <meta-data
+            android:name="lm.open311.key"
+            android:value="a130106062014995231" />
+        
+        
+    </application>
+
+</manifest>

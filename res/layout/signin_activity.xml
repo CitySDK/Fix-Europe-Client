@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dashboard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdgeLength="8dp"
+    android:paddingBottom="8dp"
+    android:paddingRight="8dp" >
+
+    <RelativeLayout
+        style="@style/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:id="@+id/header"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:orientation="vertical"
+            android:id="@+id/form"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textStyle="bold"
+                android:textColor="#372c24" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:id="@+id/email_text"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+               	android:text="@string/password"
+                android:textColor="#372c24" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:id="@+id/password_text"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:layout_below="@id/form"
+            android:id="@+id/signin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/signin" />
+
+        <com.google.android.gms.common.SignInButton
+            android:layout_below="@id/form"
+            android:id="@+id/google_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/form"
+            android:layout_marginTop="10dip" />
+    </RelativeLayout>
+
+</ScrollView>

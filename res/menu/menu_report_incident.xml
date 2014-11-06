@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_incidents"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/show_incidents"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="@string/menu_settings"/>
+
+</menu>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/preferences_report" >
+        <CheckBoxPreference
+            android:key="checkbox_phone_report_preferences"
+            android:summary="@string/preference_phone_checkbox_summary"
+            android:title="@string/preference_phone_checkbox" />
+        
+        <CheckBoxPreference
+            android:key="checkbox_mail_report_preferences"
+            android:summary="@string/preference_mail_checkbox_summary"
+            android:title="@string/preference_mail_checkbox" />
+        
+        <ListPreference
+            android:dependency="checkbox_mail_report_preferences"
+            android:dialogTitle="@string/preference_select_mail"
+            android:key="prefered_email"
+            android:summary="@string/preference_select_mail"
+            android:title="@string/preference_select_mail" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>
